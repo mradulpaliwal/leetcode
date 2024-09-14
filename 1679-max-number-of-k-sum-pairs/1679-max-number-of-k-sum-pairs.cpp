@@ -9,9 +9,11 @@ public:
        while(left<right){
            if(nums[left]+nums[right]==k){
                count++;
-               nums.erase(nums.begin() + left);
-              nums.erase(nums.begin() + right);
-               right-=2;
+              //nums.erase(nums.begin() + left); 
+               left++;
+              //nums.erase(nums.begin() + right);
+              right--;
+               
 
            }
            else if(nums[left]+nums[right]>k)
