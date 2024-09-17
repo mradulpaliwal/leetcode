@@ -4,10 +4,8 @@ public:
         int n=nums.size();
         int mxi=0;
         
-        unordered_set<int>h;
-        for(int i=0;i<n;i++){
-            h.insert(nums[i]);
-        }
+        unordered_set<int>h(nums.begin(),nums.end());
+       
         for(int i=0;i<n;i++){
             if(h.find(nums[i]-1)==h.end()){
                 int count=1;
